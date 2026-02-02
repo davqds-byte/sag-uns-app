@@ -1657,12 +1657,18 @@
             answeringSection.classList.remove('hidden');
             
             const hasVotes = data.votedSubs && Object.keys(data.votedSubs).length > 0;
-            const hasReply = data.activeSubReply !== -1;
+            const hasReply = data.activeSubReply !== undefined && data.activeSubReply !== -1;
             
             renderAnsweringList(card.sub, data.votedSubs || {}, data.activeSubReply);
-            nextBtn.classList.toggle('hidden', !hasReply);
             
-            console.log("📊 State: Answering phase - Votes:", hasVotes, "Reply:", hasReply);
+            // Show next button if player has selected a question to answer
+            if(hasReply) {
+              nextBtn.classList.remove('hidden');
+            } else {
+              nextBtn.classList.add('hidden');
+            }
+            
+            console.log("📊 State: Answering phase - Votes:", hasVotes, "Reply:", hasReply, "activeSubReply:", data.activeSubReply);
           }
           
         } else {
@@ -1747,9 +1753,5 @@
     console.log("%c🎮 Sag uns! Game Loaded", "color: #6c5ce7; font-size: 16px; font-weight: bold;");
     console.log("%c✨ With interactive tutorial & welcome screen!", "color: #00b894; font-size: 14px;");
   </script>
-  <script>
-  console.log(allQuestions); // Pour vérifier que ça charge
-  // ... le reste de ton code ...
-</script>
 </body>
 </html>
