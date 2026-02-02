@@ -1,4 +1,4 @@
-export const allQuestions = [
+const allQuestions = [
   { "q": "Was ist dir im Leben am wichtigsten und warum hat sich diese Priorität für dich entwickelt?", "sub": ["Seit wann?", "Hat sich geändert?", "Priorität?", "Konflikte?", "Opfer gebracht?", "Bleibt stabil?", "Zukunftspläne?", "Andere Meinung?"] },
   { "q": "Welche kleinen Momente im Alltag machen dich wirklich glücklich und erfüllt?", "sub": ["Täglich?", "Mit Menschen?", "Alleine auch?", "Warum genau?", "Seit wann?", "Bewusst genießen?", "Mehr davon?", "Teilen mit anderen?"] },
   { "q": "Was bedeutet echte Freundschaft für dich und was brauchst du von deinen Freunden?", "sub": ["Vertrauen wichtig?", "Zeit zusammen?", "Immer da sein?", "Warum wichtig?", "Grenzen respektieren?", "Langfristig denken?", "Aktiv pflegen?", "Veränderung zulassen?"] },
